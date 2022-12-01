@@ -39,24 +39,24 @@ var data = [{
 
 }];
 
-var quote_function = () => {
-    console.log('Button Clicked', data);
-    random = i++; 8
-    if (i > data.length) {
-        i = 0;
-        random = i;
-    }
-    console.log(i)
-    quote.innerHTML = data[random].quote;
-    author.innerHTML = data[random].author;
-}
-
 // var quote_function = () => {
 //     console.log('Button Clicked', data);
-//     random = Math.floor(Math.random() * data.length)
+//     random = i++; 8
+//     if (i > data.length) {
+//         i = 0;
+//         random = i;
+//     }
+//     console.log(i)
 //     quote.innerHTML = data[random].quote;
 //     author.innerHTML = data[random].author;
 // }
+
+var quote_function = () => {
+    console.log('Button Clicked', data);
+    random = Math.floor(Math.random() * data.length)
+    quote.innerHTML = data[random].quote;
+    author.innerHTML = data[random].author;
+}
 
 new_button.addEventListener('click', quote_function);
 quote_function()
